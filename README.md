@@ -1,112 +1,74 @@
-📌 Problem Statement
+# Telugu Comment Toxicity Detection System
 
-Online platforms with regional language content often lack effective moderation tools, especially for low-resource languages like Telugu.
-Manual moderation does not scale, and most existing models perform poorly on code-mixed or regional abusive text.
+A machine learning based web application for detecting toxic, abusive, and offensive comments in **Telugu**, with support for multilingual and code-mixed Indian language text. The system is built using **IndicBERT** and deployed as an interactive web app on **Hugging Face Spaces**.
 
-This project aims to solve that gap by building an automated toxicity detection system focused on Telugu comments.
+🔗 **Live Demo**  
+https://huggingface.co/spaces/Thilak118/teluguCommentToxicityDetection
 
-🚀 Features
+---
 
-Detects toxic, abusive, and offensive language
+## Problem Statement
 
-Strong focus on Telugu
+With the rapid growth of regional language content on social media and online platforms, effective moderation for **low-resource languages like Telugu** remains a challenge. Existing toxicity detection systems are mostly English-centric and fail to perform well on Telugu and code-mixed text.
 
-Handles code-mixed text (Telugu + English)
+This project aims to bridge that gap by providing an **automated toxicity detection system focused on Telugu comments**, enabling scalable and reliable content moderation.
 
-Trained on 200,000+ real-world comments
+---
 
-Web-based interactive interface
+## Features
 
-Fast inference suitable for real-time use
+- Detects toxic, abusive, and offensive comments  
+- Strong focus on Telugu language text  
+- Handles Telugu-English code-mixed inputs  
+- Trained on 200,000+ real-world comments  
+- Interactive web-based interface  
+- Fast and efficient inference  
 
-🧠 Model & Approach
+---
 
-Base Model: IndicBERT
+## Model & Approach
 
-Task: Text classification (toxic vs non-toxic)
+- **Base Model**: IndicBERT  
+- **Task**: Text classification (toxic vs non-toxic)  
+- **Languages**: Telugu (primary), multilingual Indian text  
+- **Dataset**:  
+  - 200,000+ real-world comments collected from online platforms  
+  - Includes abusive, offensive, and neutral samples  
+- **Preprocessing**:  
+  - Text normalization  
+  - Handling of informal and code-mixed language  
+  - Tokenization using IndicBERT tokenizer  
 
-Languages: Telugu (primary), multilingual Indian text
+The model was fine-tuned to improve accuracy and robustness on low-resource and informal Telugu text commonly found on social media.
 
-Data:
+---
 
-Real-world comments collected from online platforms
+## Tech Stack
 
-Includes abusive, offensive, and neutral samples
+- **Programming Language**: Python  
+- **NLP / Machine Learning**:  
+  - Transformers  
+  - IndicBERT  
+  - PyTorch  
+- **Web Interface**: Gradio  
+- **Deployment**: Hugging Face Spaces  
+- **Development Environment**: Jupyter Notebook  
 
-Preprocessing:
+---
 
-Text normalization
+## How It Works
 
-Handling code-mixed inputs
+1. User enters a Telugu or code-mixed comment  
+2. Input text is preprocessed and tokenized  
+3. IndicBERT model performs toxicity classification  
+4. Output displays whether the comment is toxic or non-toxic  
 
-Tokenization using IndicBERT tokenizer
+---
 
-The model was fine-tuned to improve robustness on low-resource and informal text, which is common in social media comments.
+## Installation (Local Setup)
 
-🛠️ Tech Stack
-
-Programming Language: Python
-
-ML / NLP:
-
-Transformers
-
-IndicBERT
-
-PyTorch
-
-Web Interface: Gradio
-
-Deployment: Hugging Face Spaces
-
-Notebook: Jupyter
-
-🖥️ How the Application Works
-
-User enters a Telugu or code-mixed comment
-
-Text is preprocessed and tokenized
-
-IndicBERT model performs classification
-
-Output displays whether the comment is toxic or non-toxic
-
-📦 Installation (Local Setup)
+```bash
 git clone https://github.com/your-username/telugu-comment-toxicity-detection.git
 cd telugu-comment-toxicity-detection
 pip install -r requirements.txt
 python app.py
-
-🌐 Deployment
-
-The project is deployed using Hugging Face Spaces, allowing anyone to test the model without local setup.
-
-Live link:
-https://huggingface.co/spaces/Thilak118/teluguCommentToxicityDetection
-
-📊 Results
-
-Improved accuracy on Telugu abusive text
-
-Better handling of informal and code-mixed language
-
-More robust compared to generic English-only toxicity models
-
-👨‍💻 Author
-
-M Sadiq
-
-LinkedIn: https://linkedin.com/in/m-sadiq
-
-
-Project details and background are aligned with the author’s academic and practical experience in cybersecurity and applied machine learning 
-
-📈 Future Enhancements
-
-Multi-class toxicity labels (hate, threat, harassment, etc.)
-
-Support for more Indian languages
-
-API-based integration for social media platforms
-
-Improved explainability using attention visualization
